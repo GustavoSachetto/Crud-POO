@@ -110,6 +110,7 @@ CREATE TABLE `usuario` (
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   `funcional` int(11) NOT NULL,
+  `status` tinyint(1) DEFAULT 0,
   `deleted` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -117,11 +118,11 @@ CREATE TABLE `usuario` (
 -- Despejando dados para a tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `email`, `senha`, `funcional`, `deleted`) VALUES
-(1, 'f.cardozo@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 1, 0),
-(2, 'joseantonio123@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 2, 0),
-(3, 'fernanda_noemia@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 3, 0),
-(4, 'luquinhas32@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu',4, 0);
+INSERT INTO `usuario` (`id`, `email`, `senha`, `funcional`, `deleted`, `status`) VALUES
+(1, 'f.cardozo@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 1, 0, 1),
+(2, 'joseantonio123@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 2, 0, 0),
+(3, 'fernanda_noemia@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 3, 0, 0),
+(4, 'luquinhas32@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu',4, 0, 0);
 
 --
 -- Índices para tabelas despejadas
