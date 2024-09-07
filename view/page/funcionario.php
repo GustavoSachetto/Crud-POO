@@ -10,6 +10,8 @@
 <body>
   <?php include '../../controller/exibeFuncionario.php'?> 
   <?php include_once '../../controller/DateFormatter.php' ?>
+  <?php include_once '../../controller/CpfFormatter.php' ?>
+  <?php include_once '../../controller/PhoneFormatter.php' ?>
   <header>
     <?php include '../layout/navbar.php' ?>
   </header>
@@ -40,8 +42,8 @@
                     <th scope="row"><?= $value['funcional'] ?></th>
                     <td><?= $value['nome'] ?></td> 
                     <td> <img src="<?= URL. "/" . $value['image_url']?>" style="border-radius:13px;" alt="foto do funcionario" width="100" /></td>
-                    <td><?= $value['cpf'] ?></td>
-                    <td><?= $value['telefone'] ?></td>
+                    <td><?= CpfFormatter::format($value['cpf']) ?></td>
+                    <td><?= PhoneFormatter::format($value['telefone']) ?></td>
                     <td><?= $value['endereco'] ?></td>
                     <td><?= DateFormatter::format($value['created_at']) ?></td>
                     <td><?= empty($value['updated_at']) ? 'Nunca alterado' : DateFormatter::format($value['updated_at']) ?></td>

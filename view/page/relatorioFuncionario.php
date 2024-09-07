@@ -10,6 +10,8 @@
     <?php include '../layout/privateAdmin.php' ?>
     
     <?php include '../../controller/DateFormatter.php' ?>
+    <?php include '../../controller/CpfFormatter.php' ?>
+    <?php include '../../controller/PhoneFormatter.php' ?>
     <link rel="stylesheet" href="../css/relatorio.css">
 </head>
 
@@ -33,13 +35,13 @@
                     <li>
                         <span>
                             <strong class="fw-medium">Cpf: </strong>
-                            <?= $value[0]['cpf'] ?>
+                            <?= CpfFormatter::format($value[0]['cpf']) ?>
                         </span>                        
                     </li>
                     <li>
                         <span>
                             <strong class="fw-medium">Telefone: </strong>
-                            <?= $value[0]['telefone'] ?>
+                            <?= PhoneFormatter::format($value[0]['telefone']) ?>
                         </span> 
                   
                     </li>

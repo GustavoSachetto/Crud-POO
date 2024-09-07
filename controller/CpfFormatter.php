@@ -1,7 +1,7 @@
 <?php
 
 class CpfFormatter{
-    public static function cpfFormatter($cpf)
+    public static function format($cpf)
     {
         $cpf = preg_replace('/\D/', '', $cpf);
     
