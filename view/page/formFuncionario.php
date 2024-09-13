@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funcionário</title>
   <?php include '../layout/head.php' ?>
-  <?php include '../layout/private.php' ?>
-  <script src="../js/datetime.js"></script>
+  <?php include '../layout/privateAdmin.php' ?>
+  <script src="../js/datetime.js" defer></script>
+  <script src="../js/cpf.js" defer></script>
+  <script src="../js/phone.js" defer></script>
 </head>
 <body>
 	<?php include '../../controller/recebeFuncionario.php' ?>
@@ -38,7 +40,7 @@
 						id="cpf" 
 						name="cpf" 
 						class="form-control" 
-						maxlength="11" 
+						maxlength="14" 
 						placeholder="CPF" 
 						required 
 					/>

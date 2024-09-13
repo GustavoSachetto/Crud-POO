@@ -78,7 +78,7 @@ INSERT INTO `departamento` (`nomeDepartamento`, `codDepartamento`, `created_at`,
 
 CREATE TABLE `funcionario` (
   `funcional` int(11) NOT NULL,
-  `cpf` char(11) NOT NULL,
+  `cpf` char(14) NOT NULL,
   `nome` varchar(40) NOT NULL,
   `telefone` char(15) DEFAULT NULL,
   `endereco` varchar(70) NOT NULL,
@@ -94,10 +94,10 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`funcional`, `cpf`, `nome`, `telefone`, `endereco`, `created_at`, `updated_at`, `image_url`, `codDepartamento`, `codCargo`) VALUES
-(1, '25968921102', 'Fernando Henrique Cardozo', '11934455420', 'Parque Vitória / Franco da Rocha SP', '2024-08-30 09:25:00', '2024-09-03 17:56:00', 'view/img/funcionario/1725397013_pessoa.jpg', 1, 2),
-(2, '16892555202', 'José Antonio Vasquez', '11999232876', 'Av. Antonia Leopodina / Caieras SP', '2024-08-30 09:29:00', '2024-09-03 14:59:00', 'view/img/funcionario/1725386340_pessoa2.jpg', 1, 1),
-(3, '12365885488', 'Fernanda Noemia da Silva', '11933555689', 'Parque Vila Lobo / Francisco Morato SP', '2024-09-03 15:56:00', '2024-09-03 16:11:00', 'view/img/funcionario/1725390649_pessoa3.jpg', 2, 2),
-(4, '25566689825', 'Antonio Lima de Rafael', '11999236899', 'Antonio de Solza / São Paulo SP', '2024-09-03 17:40:00', NULL, 'view/img/funcionario/1725396113_pessoa4.jpg', 3, 3);
+(1, '259.689.211-02', 'Fernando Henrique Cardozo', '(11) 93445-5420', 'Parque Vitória / Franco da Rocha SP', '2024-08-30 09:25:00', '2024-09-03 17:56:00', 'view/img/funcionario/1725397013_pessoa.jpg', 1, 2),
+(2, '168.925.552-02', 'José Antonio Vasquez', '(11) 99923-2876', 'Av. Antonia Leopodina / Caieras SP', '2024-08-30 09:29:00', '2024-09-03 14:59:00', 'view/img/funcionario/1725386340_pessoa2.jpg', 1, 1),
+(3, '123.658.854-88', 'Fernanda Noemia da Silva', '(11) 93355-5689', 'Parque Vila Lobo / Francisco Morato SP', '2024-09-03 15:56:00', '2024-09-03 16:11:00', 'view/img/funcionario/1725390649_pessoa3.jpg', 2, 2),
+(4, '255.666.898-25', 'Antonio Lima de Rafael', '(11) 99923-6899', 'Antonio de Solza / São Paulo SP', '2024-09-03 17:40:00', NULL, 'view/img/funcionario/1725396113_pessoa4.jpg', 3, 3);
 
 -- --------------------------------------------------------
 
@@ -110,6 +110,7 @@ CREATE TABLE `usuario` (
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   `funcional` int(11) NOT NULL,
+  `status` tinyint(1) DEFAULT 0,
   `deleted` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -117,11 +118,11 @@ CREATE TABLE `usuario` (
 -- Despejando dados para a tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `email`, `senha`, `funcional`, `deleted`) VALUES
-(1, 'f.cardozo@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 1, 0),
-(2, 'joseantonio123@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 2, 0),
-(3, 'fernanda_noemia@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 3, 0),
-(4, 'luquinhas32@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu',4, 0);
+INSERT INTO `usuario` (`id`, `email`, `senha`, `funcional`, `deleted`, `status`) VALUES
+(1, 'f.cardozo@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 1, 0, 1),
+(2, 'joseantonio123@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 2, 0, 0),
+(3, 'fernanda_noemia@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 3, 0, 0),
+(4, 'luquinhas32@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu',4, 0, 0);
 
 --
 -- Índices para tabelas despejadas

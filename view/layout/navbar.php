@@ -1,4 +1,5 @@
 <?php include_once __DIR__.'../../../controller/removeLogin.php' ?>
+<script src="<?= URL."/view/js/logout.js"?>" defer></script>
 
 <nav class="navbar navbar-expand-lg bg-dark-subtle shadow-sm">
   <div class="container-fluid">
@@ -39,9 +40,7 @@
           </ul>
         </li>
         <?php if (isset($_SESSION['usuario'])): ?>
-          <form action="" method="post" class="d-flex align-itens-center">
-            <button type="submit" style="border: none;background: transparent;" name="removeLoginUsuario">Sair</button>
-          </form>
+            <button type="button" style="border: none;background: transparent;" id="logout">Sair</button>
         <?php endif; ?>
       </ul>
     </div>

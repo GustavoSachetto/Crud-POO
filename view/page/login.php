@@ -7,7 +7,9 @@
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Crud POO | Login</title>
     <?php include '../layout/head.php' ?>
-    <?php
+    <?php 
+        include '../../controller/criaLogin.php'; 
+        
         if (isset($_SESSION['usuario'])) header('Location: http://localhost/Crud-POO/');
     ?>
 </head>
@@ -15,7 +17,6 @@
     <header>
         <?php include '../layout/navbar.php' ?>
     </header>
-    <?php include '../../controller/criaLogin.php' ?>
     <main class="m-4 d-flex flex-column">
         <h3 class="fw-normal">Login</h3>
         <form method="post" action="" style="max-width: 400px; width:100%;" class="d-flex flex-column">
