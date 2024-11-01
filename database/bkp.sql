@@ -119,7 +119,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `email`, `senha`, `funcional`, `deleted`, `status`) VALUES
-(1, 'f.cardozo@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 1, 0, 1),
+(1, 'admin@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 1, 0, 1),
 (2, 'joseantonio123@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 2, 0, 0),
 (3, 'fernanda_noemia@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu', 3, 0, 0),
 (4, 'luquinhas32@email.com', '$2y$10$Y8.CyNCQqIgZ2BfwJI4viOfbrrcl6T2pdHOYcHaCbLuGaJGp5J5Uu',4, 0, 0);

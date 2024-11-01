@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $result = Usuario::read("email = '".$values['email']."'");
 
-    if ($result !== false) {
+    if ($result) {
         if (password_verify($values['senha'], $result['senha'])) {
             $_SESSION['usuario'] = $result;
         }
