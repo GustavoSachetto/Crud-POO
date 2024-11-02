@@ -1,5 +1,3 @@
-<?php include_once __DIR__.'../../../config/define.php' ?>
-
 <!-- Google fonts (Fira Sans) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
