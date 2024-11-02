@@ -1,4 +1,5 @@
 <?php include_once __DIR__.'/../../config/define.php' ?>
+<?php include '../layout/privateAdmin.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funcionário</title>
   <?php include '../layout/head.php' ?>
-  <?php include '../layout/privateAdmin.php' ?>
 </head>
 <body>
   <?php include '../../controller/exibeFuncionario.php'?> 

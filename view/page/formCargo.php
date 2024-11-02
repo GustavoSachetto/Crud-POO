@@ -1,4 +1,5 @@
 <?php include_once __DIR__.'/../../config/define.php' ?>
+<?php include '../layout/privateAdmin.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,6 @@
   <title>Cargo</title>
   <script src="../js/datetime.js"></script>
   <?php include '../layout/head.php' ?>
-  <?php include '../layout/privateAdmin.php' ?>
 </head>
 <body>
   <?php include '../../controller/recebeCargo.php'?>

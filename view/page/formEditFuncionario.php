@@ -1,4 +1,5 @@
 <?php include_once __DIR__.'/../../config/define.php' ?>
+<?php include '../layout/privateAdmin.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,6 @@
   <script src="../js/cpf.js" defer></script>
   <script src="../js/phone.js" defer></script>
   <?php include '../layout/head.php' ?>
-  <?php include '../layout/privateAdmin.php' ?>
 </head>
 <body>
   <?php include '../../controller/editaFuncionario.php'?>

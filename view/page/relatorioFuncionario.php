@@ -1,4 +1,5 @@
 <?php include_once __DIR__.'/../../config/define.php' ?>
+<?php include '../layout/privateAdmin.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,9 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório de Funcionário</title>
-    <?php include '../layout/head.php' ?>
-    <?php include '../layout/privateAdmin.php' ?>
-    
+    <?php include '../layout/head.php' ?>    
     <?php include '../../controller/DateFormatter.php' ?>
     <?php include '../../controller/CpfFormatter.php' ?>
     <?php include '../../controller/PhoneFormatter.php' ?>
