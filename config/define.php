@@ -9,3 +9,5 @@ foreach ($parsed as $key => $value) {
 }
 
 define('URL', $_ENV['URL']);
+
+echo "<script>const URL = '".URL."';</script>";

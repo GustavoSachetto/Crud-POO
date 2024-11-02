@@ -6,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud POO | Login</title>
     <?php include '../layout/head.php' ?>
     <?php 
         include '../../controller/criaLogin.php'; 
         
-        if (isset($_SESSION['usuario'])) header('Location: http://localhost/Crud-POO/');
+        if (isset($_SESSION['usuario'])) header('Location: '.URL);
     ?>
 </head>
 <body>
