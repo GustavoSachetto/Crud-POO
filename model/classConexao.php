@@ -103,4 +103,9 @@ class Conection
     }
 }
 
-Conection::config('empresateste', 'localhost', 'root', '');
+Conection::config(
+    $_ENV['DB_NAME'], 
+    $_ENV['DB_HOST'], 
+    $_ENV['DB_USER'], 
+    $_ENV['DB_PASS']
+);

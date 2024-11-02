@@ -2,4 +2,10 @@
 
 session_start();
 
-define('URL', 'http://localhost/Crud-POO');
+$parsed = parse_ini_file(__DIR__.'\..\.env');
+
+foreach ($parsed as $key => $value) {
+  $_ENV[$key] = $value;
+}
+
+define('URL', $_ENV['URL']);
