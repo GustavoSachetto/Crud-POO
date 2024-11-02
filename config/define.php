@@ -2,7 +2,7 @@
 
 session_start();
 
-$parsed = parse_ini_file(__DIR__.'\..\.env');
+$parsed = parse_ini_file(__DIR__.'/../.env');
 
 foreach ($parsed as $key => $value) {
   $_ENV[$key] = $value;
