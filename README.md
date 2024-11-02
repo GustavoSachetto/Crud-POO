@@ -5,7 +5,7 @@
 Crud POO é um projeto de estudo baseado numa atividade proposta tem sala de aula para a matéria de Sistemas Web. A atividade consiste em realizar o __cadastro, exibição, alteração e exclusão__ das tabelas 
 apresentadas no banco de dados (que se encontra na pasta database), aplicando o __padrão MVC__ junto da __programação orientada a objetos (POO)__.
 
-* __Link de acesso:__ https://gustavosachettoapi.000webhostapp.com/
+* __Link de acesso:__ https://gustavosachetto.site/crud-poo
 
 ## Desenvolvendo
 Esse projeto foi desenvolvido inteiramente com: __PHP, HTML, BOOTSTRAP e MySQL.__ Nele foi abordado principalmente a programação orientada a objetos, além de reforçar a conexão com banco de dados através do PDO.
