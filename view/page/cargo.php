@@ -1,5 +1,5 @@
 <?php include_once __DIR__.'/../../config/define.php' ?>
-<?php include '../layout/privateAdmin.php'; var_dump($_SESSION); ?>
+<?php include '../layout/privateAdmin.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
