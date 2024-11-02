@@ -1,4 +1,9 @@
 <?php include_once __DIR__.'/../../config/define.php' ?>
+<?php 
+    include '../../controller/criaLogin.php'; 
+
+    if (isset($_SESSION['usuario'])) header('Location: '.URL);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,11 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud POO | Login</title>
     <?php include '../layout/head.php' ?>
-    <?php 
-        include '../../controller/criaLogin.php'; 
-        
-        if (isset($_SESSION['usuario'])) header('Location: '.URL);
-    ?>
 </head>
 <body>
     <header>

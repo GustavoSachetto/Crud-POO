@@ -1,4 +1,8 @@
-<?php include_once __DIR__.'../../../controller/removeLogin.php' ?>
+<?php 
+  include_once __DIR__.'../../../controller/removeLogin.php'; 
+  echo "<script>const baseUrl = '".URL."';</script>";
+?>
+
 <script src="<?= URL."/view/js/logout.js"?>" defer></script>
 
 <nav class="navbar navbar-expand-lg bg-dark-subtle shadow-sm">
