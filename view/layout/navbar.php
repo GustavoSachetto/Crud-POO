@@ -16,35 +16,58 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item dropdown mx-2">
-          <a class="nav-link dropdown-toggle" href="#" id="cargoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Cargo
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="cargoDropdown">
-            <li><a class="dropdown-item" href="<?= URL ?>/view/page/cargo.php">Buscar</a></li>
-            <li><a class="dropdown-item" href="<?= URL ?>/view/page/formCargo.php">Cadastrar</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown mx-2">
-          <a class="nav-link dropdown-toggle" href="#" id="departamentoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Departamento
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="departamentoDropdown">
-            <li><a class="dropdown-item" href="<?= URL ?>/view/page/departamento.php">Buscar</a></li>
-            <li><a class="dropdown-item" href="<?= URL ?>/view/page/formDepartamento.php">Cadastrar</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown mx-2">
-          <a class="nav-link dropdown-toggle" href="#" id="funcionarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Funcionário
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="funcionarioDropdown">
-            <li><a class="dropdown-item" href="<?= URL ?>/view/page/funcionario.php">Buscar</a></li>
-            <li><a class="dropdown-item" href="<?= URL ?>/view/page/formFuncionario.php">Cadastrar</a></li>
-          </ul>
-        </li>
+        
+        <?php if (!isset($_SESSION['usuario']) or empty($_SESSION["usuario"])): ?>
+          <!-- Usuário não logado -->
+          <li><a class="nav-link" href="<?= URL ?>/view/page/login.php" >Login</a></li>
+        <?php endif; ?>
+      
         <?php if (isset($_SESSION['usuario'])): ?>
-            <button type="button" style="border: none;background: transparent;" id="logout">Sair</button>
+          <!-- Usuário logado -->
+
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle" href="#" id="cargoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Meus dados
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="cargoDropdown">
+              <li><a class="dropdown-item" href="<?= URL ?>/view/page/relatorioFuncionarioLogado.php">Relatório</a></li>
+              <li><a class="dropdown-item" href="<?= URL ?>/view/page/formEditFuncionarioLogado.php">Editar</a></li>
+            </ul>
+          </li>
+          
+          <?php if (boolval($_SESSION["usuario"]["status"]) == true): ?>
+            <!-- Usuário admin -->
+
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="#" id="cargoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cargo
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="cargoDropdown">
+                <li><a class="dropdown-item" href="<?= URL ?>/view/page/cargo.php">Buscar</a></li>
+                <li><a class="dropdown-item" href="<?= URL ?>/view/page/formCargo.php">Cadastrar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="#" id="departamentoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Departamento
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="departamentoDropdown">
+                <li><a class="dropdown-item" href="<?= URL ?>/view/page/departamento.php">Buscar</a></li>
+                <li><a class="dropdown-item" href="<?= URL ?>/view/page/formDepartamento.php">Cadastrar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="#" id="funcionarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Funcionário
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="funcionarioDropdown">
+                <li><a class="dropdown-item" href="<?= URL ?>/view/page/funcionario.php">Buscar</a></li>
+                <li><a class="dropdown-item" href="<?= URL ?>/view/page/formFuncionario.php">Cadastrar</a></li>
+              </ul>
+            </li>
+          <?php endif; ?>
+
+          <button type="button" style="border: none;background: transparent;" id="logout">Sair</button>
         <?php endif; ?>
       </ul>
     </div>
