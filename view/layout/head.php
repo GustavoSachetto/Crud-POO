@@ -1,3 +1,6 @@
+<!-- Favicon -->
+<link rel="shortcut icon" href="<?= URL ?>/favicon.ico" type="image/x-icon">
+
 <!-- Google fonts (Fira Sans) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,4 +12,3 @@
 
 <!-- Link Css -->
 <link rel="stylesheet" href="<?= URL ?>/view/css/style.css">
-
